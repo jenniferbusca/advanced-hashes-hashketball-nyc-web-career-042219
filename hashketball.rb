@@ -209,9 +209,11 @@ end
 # end
 
 def winning_team
-  points_list = Hash.new(0)
-  game_hash.each do |team|
-    puts :team_name
+  points_list = Hash.new
+  game_hash.each do |team, team_data|
+    team_data[:players].each do |player, player_data|
+      points_list[team] = player_data[:points]
+    end
   end
-  # return points_list.key(points_list.values.max)
+  return points_list.key(points_list.values.max)
 end
