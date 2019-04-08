@@ -211,7 +211,7 @@ end
 def winning_team
   points_list = Hash.new(0)
   game_hash.each do |team|
-    puts player_data[:points]
+    point_list[team] += 1
   end
   return points_list.key(points_list.values.max)
 end
