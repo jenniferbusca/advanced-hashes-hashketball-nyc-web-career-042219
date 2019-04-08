@@ -198,13 +198,12 @@ def most_points_scored
   return points_list.key(points_list.values.max)
 end
 
-def winning_team
-  points_list = Hash.new
-  game_hash.each do |team, team_data|
-    team_data[:players].each do |player, player_data|
-      binding.pry
-      points_list[team_data][:team_name] += player_data[:points]
-    end
-  end
-  return points_list.key(points_list.values.max)
-end
+# def winning_team
+#   points_list = Hash.new
+#   game_hash.each do |team, team_data|
+#     team_data[:players].each do |player, player_data|
+#       points_list[team_data][:team_name] += player_data[:points]
+#     end
+#   end
+#   return points_list.key(points_list.values.max)
+# end
