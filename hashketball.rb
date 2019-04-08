@@ -209,7 +209,7 @@ end
 # end
 
 def winning_team
-  points_list = Hash.new
+  points_list = {}
   game_hash.each do |team, team_data|
     team_data[:players].each do |player, player_data|
       points_list[team_data][:team_name] = player_data[:points]
