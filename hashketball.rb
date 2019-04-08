@@ -209,9 +209,9 @@ end
 # end
 
 def winning_team
-  points_list = Hash.new
+  points_list = Hash.new(0)
   game_hash.each do |team, team_data|
-    points_list = team_data[:players][:points]
+    points_list[team_data][:team_name] += player_data[:points]
   end
   return points_list.key(points_list.values.max)
 end
